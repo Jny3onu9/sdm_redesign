@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidmool</title>
+
+    <!-- 제이쿼리 불러오기 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- 스와이퍼 라이브러리 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- 테일윈드 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- 공통 CSS 연결 -->
+    <link rel="stylesheet" href="css/common.css">
+
+    <!-- 공통 Js 연결 -->
+    <script defer src="js/common.js"></script>
+
+</head>
+<body>
+    <!-- 헤더 -->
+    <!-- PC header -->
+    <header class="pc-top-bar">
+        <div class="pc_top_bar_wrap h-[200px]">
+            <div class="con mx-auto flex h-full gap-x-[20px]">
+                <div class="flex items-center justify-center">
+                    <a href="#" class="top_bar_logo">
+                        <img src="https://ifh.cc/g/vAT9XH.png" alt="시드물 로고">
+                    </a>
+                </div>
+                <div class="flex-1 flex items-center justify-center mt-[30px]">
+                    <div class="widget-wrap w-full flex flex-col items-center">
+                        <div class="top_bar_search_box">
+                            <input type="text" placeholder="♥ 오리지널 자연주의 시드물 공식 화장품 ♥" class="w-[400px]">
+                            <button class="pc_search_btn">
+                                <img src="https://ifh.cc/g/TxOanS.png" alt="검색 아이콘">
+                            </button>
+                        </div>
+                        <div class="search-keyword flex justify-center mt-[10px]">
+                            <ul class="flex">
+                                <li><a href="#">EFG</a></li>
+                                <li><a href="#">레티놀</a></li>
+                                <li><a href="#">바디로션</a></li>
+                                <li><a href="#">수분크림</a></li>
+                                <li><a href="#">클렌징</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center">
+                    <div class="login-menu-widget">
+                        <ul class="flex">
+                            <li><a href="#">로그인</a></li>
+                            <li><a href="#">회원가입</a></li>
+                            <li><a href="#">고객센터</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pc_top_bar__bottom-wrap h-[65px] w-full bg-white">
+            <div class="con mx-auto h-full">
+                <nav class="pc_header_menu w-full flex">
+                    <ul class="pc_header_tapmenu flex">
+                        <li>
+                            <a href="#">제품전체보기</a>
+                            <div class="pc_sub_menu bg-white">
+                                <div class="con">
+                                    <ul>
+                                        <li>
+                                            <a href="#" class="pc_sub_sub_menu_title1">기능별</a>
+                                            <div class="pc_sub_sub_menu pc_sub_sub_menu_1">
+                                                <ul class="mt-[5px]">
+                                                    <li><a href="#">신제품</a></li>
+                                                    <li><a href="#">시드물2 클렌징</a></li>
+                                                    <li><a href="#">수제비누</a></li>
+                                                    <li><a href="#">페이스&바디오일</a></li>
+                                                    <li><a href="#">수분크림</a></li>
+                                                    <li><a href="#">스킨토너미스트</a></li>
+                                                    <li><a href="#">앰플</a></li>
+                                                    <li><a href="#">에센스세럼</a></li>
+                                                    <li><a href="#">수분젤</a></li>
+                                                </ul>
+                                                <ul class="mt-[15px]">
+                                                    <li><a href="#">로션</a></li>
+                                                    <li><a href="#">크림</a></li>
+                                                    <li><a href="#">썬스크린</a></li>
+                                                    <li><a href="#">무기자차</a></li>
+                                                    <li><a href="#">색조</a></li>
+                                                    <li><a href="#">각질관리</a></li>
+                                                    <li><a href="#">마스크팩</a></li>
+                                                    <li><a href="#">바디</a></li>
+                                                    <li><a href="#">스킨케어브러쉬</a></li>
+                                                    <li><a href="#">헤어</a></li>
+                                                </ul>
+                                                <ul class="mt-[15px]">
+                                                    <li><a href="#">화장소품</a></li>
+                                                    <li><a href="#">건강식품</a></li>
+                                                    <li><a href="#">미취학가능제품</a></li>
+                                                    <li><a href="#">청소년화장품추천</a></li>
+                                                    <li><a href="#">예비맘추천</a></li>
+                                                    <li><a href="#">세트할인</a></li>
+                                                    <li><a href="#">남성용화장품</a></li>
+                                                    <li><a href="#">민중기 시리즈</a></li>
+                                                </ul>
+                                                <ul class="mt-[15px]">
+                                                    <li class="mr-[30px]"><a href="#">EVENT</a></li>
+                                                    <li><a href="#">BEST</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="pc_sub_sub_menu_title2">성분라인별</a>
+                                            <div class="pc_sub_sub_menu pc_sub_sub_menu_2">
+                                                <ul class="mt-[25px]">
+                                                    <li><a href="#">무오일 다당류</a></li>
+                                                    <li><a href="#">알로에</a></li>
+                                                    <li><a href="#">봉독</a></li>
+                                                    <li><a href="#">바하</a></li>
+                                                    <li><a href="#">아하</a></li>
+                                                    <li><a href="#">녹차(EGCG)</a></li>
+                                                    <li><a href="#">카렌듈라</a></li>
+                                                    <li><a href="#">아크바이</a></li>
+                                                    <li><a href="#">레드큐어</a></li>
+                                                    <li><a href="#">천연오일</a></li>
+                                                </ul>
+                                                <ul class="mt-[15px]">
+                                                    <li><a href="#">메가펩타이드</a></li>
+                                                    <li><a href="#">콜라겐</a></li>
+                                                    <li><a href="#">호호바</a></li>
+                                                    <li><a href="#">휴먼올리고</a></li>
+                                                    <li><a href="#">뷰리즈</a></li>
+                                                    <li><a href="#">EGF</a></li>
+                                                    <li><a href="#">프로폴리스</a></li>
+                                                    <li><a href="#">히아루론산</a></li>
+                                                    <li><a href="#">세라마이드</a></li>
+                                                    <li><a href="#">티트리</a></li>
+                                                </ul>
+                                                <ul class="mt-[15px]">
+                                                    <li><a href="#">아스타잔틴</a></li>
+                                                    <li><a href="#">사카로발효</a></li>
+                                                    <li><a href="#">병풀(센텔라)</a></li>
+                                                    <li><a href="#">닥터트럽</a></li>
+                                                    <li><a href="#">징크</a></li>
+                                                    <li><a href="#">동백</a></li>
+                                                    <li><a href="#">판테놀</a></li>
+                                                    <li><a href="#">닥터갈라톡</a></li>
+                                                    <li><a href="#">달팽이</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="pc_sub_sub_menu_title3">고민별</a>
+                                            <div class="pc_sub_sub_menu pc_sub_sub_menu_3">
+                                                <ul class="mt-[20px]">
+                                                    <li><a href="#">AC스팟</a></li>
+                                                    <li><a href="#">바디케어</a></li>
+                                                    <li><a href="#">모공관리</a></li>
+                                                    <li><a href="#">피지관리</a></li>
+                                                    <li><a href="#">장벽강화</a></li>
+                                                    <li><a href="#">거친모공</a></li>
+                                                    <li><a href="#">각질관리</a></li>
+                                                    <li><a href="#">주름개선&탄력</a></li>
+                                                    <li><a href="#">트럽</a></li>
+                                                    <li><a href="#">화이트헤드관리</a></li>
+                                                </ul>
+                                                <ul class="mt-[15px]">
+                                                    <li><a href="#">블랙헤드관리</a></li>
+                                                    <li><a href="#">속건성(수부지)</a></li>
+                                                    <li><a href="#">악건성</a></li>
+                                                    <li><a href="#">붉은톤</a></li>
+                                                    <li><a href="#">미백</a></li>
+                                                    <li><a href="#">건조&민감피부</a></li>
+                                                    <li><a href="#">자외선차단</a></li>
+                                                    <li><a href="#">안티옥시</a></li>
+                                                    <li><a href="#">탈모</a></li>
+                                                    <li><a href="#">레이저관리</a></li>
+                                                </ul>
+                                                <ul class="mt-[15px]">
+                                                    <li><a href="#">미백&주름개선</a></li>
+                                                    <li><a href="#">탄력집중관리</a></li>
+                                                    <li><a href="#">시카케어</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="pc_sub_sub_menu_title4">내추럴 99</a>
+                                            <div class="pc_sub_sub_menu pc_sub_sub_menu_4">
+                                                <ul class="mt-[45px]">
+                                                    <li><a href="#">클렌징</a></li>
+                                                    <li><a href="#">퍼스트에센스</a></li>
+                                                    <li><a href="#">스킨토너미스트</a></li>
+                                                    <li><a href="#">앰플</a></li>
+                                                    <li><a href="#">에센스세럼</a></li>
+                                                    <li><a href="#">수분젤로션</a></li>
+                                                    <li><a href="#">크림</a></li>
+                                                    <li><a href="#">립&아이</a></li>
+                                                    <li><a href="#">페이스바디오일</a></li>
+                                                </ul>
+                                                <ul class="mt-[15px]">
+                                                    <li><a href="#">마스크팩</a></li>
+                                                    <li><a href="#">바디&헤어</a></li>
+                                                    <li><a href="#">자외선차단</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="#">시드물</a></li>
+                        <li><a href="#">맞춤상담</a></li>
+                        <li><a href="#">사용후기</a></li>
+                        <li><a href="#">커뮤니티</a>
+                            <ul class="pc_sub_menu_2 bg-white">
+                                <li><a href="#">1:1문의</a></li>
+                                <li><a href="#">시드물 공지</a></li>
+                                <li><a href="#">시드물 성분사전</a></li>
+                                <li><a href="#">시드물 통신</a></li>
+                                <li><a href="#">시사모 자유게시판</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="pc_menu_btn_wrap w-full">
+                        <ul class="pc_menu_btn flex">
+                            <li><a href="#"><img src="https://ifh.cc/g/mJmlwV.png" alt=""></a></li>
+                            <li><a href="#"><img src="https://ifh.cc/g/5oJRjr.png" alt=""></a></li>
+                            <li><a href="#"><img src="https://ifh.cc/g/knYPL3.png" alt=""></a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- M header -->
+    <header class="m-top-bar">
+        <div class="m_top_bar_wrap h-[100px]">
+            <div class="con mx-auto flex h-full p-[20px]">
+                <div class="flex items-center justify-center">
+                    <a href="#" class="top_bar_logo w-[70px]">
+                        <img src="https://ifh.cc/g/vxoqtC.png" alt="시드물 로고">
+                    </a>
+                </div>
+                <div class="flex-1 flex items-center justify-center max-w-2/3">
+                    <div class="widget-wrap w-full flex items-center">
+                        <div class="top_bar_search_box w-[500px]">
+                            <input type="text" placeholder="♥ 오리지널 자연주의 시드물 공식 화장품 ♥" class="w-[400px]">
+                            <button class="pc_search_btn">
+                                <img src="https://ifh.cc/g/TxOanS.png" alt="검색 아이콘">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center top_bar_bell">
+                    <a href="#" class="top_bar_bell w-[50px]">
+                        <img src="https://ifh.cc/g/Gz2CDn.png" alt="알림 아이콘">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="m_top_bar__bottom-wrap h-[50px]">
+            <div class="con mx-auto h-full">
+                <nav class="m_header_menu w-full flex">
+                    <ul class="m_header_tapmenu flex h-full text-center">
+                        <li><a href="#">홈</a></li>
+                        <li><a href="#">시드물</a></li>
+                        <li><a href="#">맞춤상담</a></li>
+                        <li><a href="#">사용후기</a></li>
+                        <li><a href="#">커뮤니티</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- 탑 버튼 -->
+    <div class="top_btn fixed">
+        <a href="#">
+            <img src="https://ifh.cc/g/48FzAN.png" alt="탑버튼">
+        </a>
+    </div>
+
+    <!-- 스와이퍼 배너 -->
+    <!-- pc swiper banner -->
+    <div class="pc_banner_contents">
+        <div class="pc_banner_wrap">
+            <div class="pc_banner_slides mx-auto">
+                <div class="swiper swiper-container con">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide swiper-slide-1">
+                            <a href="#">
+                                <img src="https://ifh.cc/g/YFWwqj.png" alt="그린토마토 모공 리프팅 토너">
+                            </a>
+                        </li>
+                        <li class="swiper-slide swiper-slide-2">
+                            <a href="#">
+                                <img src="https://ifh.cc/g/7NykZR.png" alt="시드물 웰빙 효소">
+                            </a>
+                        </li>
+                        <li class="swiper-slide swiper-slide-3">
+                            <a href="#">
+                                <img src="https://ifh.cc/g/wqgLjo.jpg" alt="엑소좀 흔적 스킨 부스터">
+                            </a>
+                        </li>
+                        <li class="swiper-slide swiper-slide-4">
+                            <a href="#">
+                                <img src="https://ifh.cc/g/v56K4H.jpg" alt="레티놀 흔적 리페어 시리즈">
+                            </a>
+                        </li>
+                        <li class="swiper-slide swiper-slide-5">
+                            <a href="#">
+                                <img src="https://ifh.cc/g/KFD6OC.jpg" alt="닥터트럽 클렌징 밀크">
+                            </a>
+                        </li>
+                        <li class="swiper-slide swiper-slide-6">
+                            <a href="#">
+                                <img src="https://ifh.cc/g/oOzjxS.jpg" alt="민중기 피브로플라스트 앰플">
+                            </a>
+                        </li>
+                        <li class="swiper-slide swiper-slide-7">
+                            <a href="#">
+                                <img src="https://ifh.cc/g/dthzhs.jpg" alt="살구씨 코 블랙헤드 클렌징 오일">
+                            </a>
+                        </li>
+                        <li class="swiper-slide swiper-slide-8">
+                            <a href="#">
+                                <img src="https://ifh.cc/g/d8b2zT.jpg" alt="제로마진 상품들">
+                            </a>
+                        </li>
+                        <li class="swiper-slide swiper-slide-9">
+                            <a href="#">
+                                <img src="https://ifh.cc/g/1HYM3s.jpg" alt="여드름 임상 완료 제품들">
+                            </a>
+                        </li>
+                        <li class="swiper-slide swiper-slide-10">
+                            <a href="#">
+                                <img src="https://ifh.cc/g/fTtkOq.jpg" alt="마다가스카르 리얼 수분크림">
+                            </a>
+                        </li>
+                        <li class="swiper-slide swiper-slide-11">
+                            <a href="#">
+                                <img src="https://ifh.cc/g/mT9ndk.jpg" alt="민중기 EFG 앰플">
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="pc_banner_btn">
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- mobile swiper banner -->
+    <div class="mb_banner_contents">
+        <div class="mb_banner_wrap">
+            <div class="mb_banner_slides mx-auto">
+                <div class="swiper swiper-container">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide swiper-slide-1">
+                            <a href="#">
+                                <img src="https://ifh.cc/g/RTcrP4.jpg" alt="그린토마토 모공 리프팅 토너">
+                            </a>
+                        </li>
+                        <li class="swiper-slide swiper-slide-2">
+                            <a href="#">
+                                <img src="https://ifh.cc/g/h8z2Gw.png" alt="시드물 웰빙 효소">
+                            </a>
+                        </li>
+                        <li class="swiper-slide swiper-slide-3">
+                            <a href="#">
+                                <img src="https://ifh.cc/g/s5DOvj.jpg" alt="엑소좀 흔적 스킨 부스터">
+                            </a>
+                        </li>
+                        <li class="swiper-slide swiper-slide-4">
+                            <a href="#">
+                                <img src="https://ifh.cc/g/SZXm61.jpg" alt="레티놀 흔적 리페어 시리즈">
+                            </a>
+                        </li>
+                        <li class="swiper-slide swiper-slide-5">
+                            <a href="#">
+                                <img src="https://ifh.cc/g/7mvH25.jpg" alt="닥터트럽 클렌징 밀크">
+                            </a>
+                        </li>
+                        <li class="swiper-slide swiper-slide-6">
+                            <a href="#">
+                                <img src="https://ifh.cc/g/oHmA1K.jpg" alt="민중기 피브로플라스트 앰플">
+                            </a>
+                        </li>
+                        <li class="swiper-slide swiper-slide-7">
+                            <a href="#">
+                                <img src="https://ifh.cc/g/oTXDzR.jpg" alt="살구씨 코 블랙헤드 클렌징 오일">
+                            </a>
+                        </li>
+                        <li class="swiper-slide swiper-slide-8">
+                            <a href="#">
+                                <img src="https://ifh.cc/g/ccMWC1.png" alt="제로마진 상품들">
+                            </a>
+                        </li>
+                        <li class="swiper-slide swiper-slide-9">
+                            <a href="#">
+                                <img src="https://ifh.cc/g/9S6R8y.jpg" alt="여드름 임상 완료 제품들">
+                            </a>
+                        </li>
+                        <li class="swiper-slide swiper-slide-10">
+                            <a href="#">
+                                <img src="https://ifh.cc/g/dwbrfn.jpg" alt="마다가스카르 리얼 수분크림">
+                            </a>
+                        </li>
+                        <li class="swiper-slide swiper-slide-11">
+                            <a href="#">
+                                <img src="https://ifh.cc/g/8hrJOR.jpg" alt="민중기 EFG 앰플">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 신상품 -->
+    <section class="pc_newitem mt-[100px]">
+        <div class="pc_newitem_wrap con mx-auto">
+            <p>고객님들의 의견을 반영하여 만든</p>
+            <h1>신상품</h1>
+            <div class="pc_newitem_list">
+                <ul class="itemwrap flex justify-between">
+                    <li>
+                        <a href="#">
+                            <img src="image/newitem_01.png" alt="레티놀 흔적 리페어 하이드로겔 패치 60매">
+                        </a>
+                        <a href="#">
+                            <ul class="newitem-box">
+                                <li class="pc_item_name">
+                                    <p>레티놀 흔적 리페어 하이드로겔 패치 60매</p>
+                                </li>
+                                <li class="pc_price_box flex">
+                                    <p class="sale">28,600원</p>
+                                    <p class="ori">38,600원</p>
+                                </li>
+                                <li class="pc_eventbox">
+                                    <p>1+1 EVENT</p>
+                                </li>
+                            </ul>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="image/newitem_02.png" alt="5나노히알루론산약산성비누 3개묶음">
+                        </a>
+                        <a href="#">
+                            <ul class="newitem-box">
+                                <li class="pc_item_name">
+                                    <p>5나노히알루론산약산성비누 3개 묶음</p>
+                                </li>
+                                <li class="pc_price_box flex">
+                                    <p class="sale">14,400원</p>
+                                    <p class="ori">20,400원</p>
+                                </li>
+                            </ul>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="image/newitem_03.png" alt="레티놀 흔적 리페어 크림">
+                        </a>
+                        <a href="#">
+                            <ul class="newitem-box">
+                                <li class="pc_item_name">
+                                    <p>레티놀 흔적 리페어 크림 60ml</p>
+                                    <p class="name_blank">&nbsp;</p>
+                                </li>
+                                <li class="pc_price_box flex">
+                                    <p class="sale">23,800원</p>
+                                    <p class="ori">45,000원</p>
+                                </li>
+                                <li class="pc_eventbox">
+                                    <p>1+1 EVENT</p>
+                                </li>
+                            </ul>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="image/newitem_04.png" alt="리얼순 프로폴리스 시카 앰플 30ml">
+                        </a>
+                        <a href="#">
+                            <ul class="newitem-box">
+                                <li class="pc_item_name">
+                                    <p>리얼순 프로폴리스 시카 앰플 30ml</p>
+                                </li>
+                                <li class="pc_price_box flex">
+                                    <p class="sale">16,800원</p>
+                                    <p class="ori">21,800원</p>
+                                </li>
+                            </ul>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="itemwrap flex justify-between mt-[32px]">
+                    <li>
+                        <a href="#">
+                            <img src="image/newitem_05.png" alt="5나노 히알루론산 흡수 앰플 100ml">
+                        </a>
+                        <a href="#">
+                            <ul class="newitem-box">
+                                <li class="pc_item_name">
+                                    <p>5나노 히알루론산 흡수 앰플 100ml</p>
+                                </li>
+                                <li class="pc_price_box flex">
+                                    <p class="sale">16,800원/p>
+                                    <p class="ori"></p>
+                                </li>
+                                <li class="pc_eventbox">
+                                    <p>비누증정 EVENT</p>
+                                </li>
+                            </ul>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="new_thumb">
+                            <img src="image/newitem_06.png" alt="[대용량] 시드물 프리미엄 불소 엠치약 120g">
+                        </a>
+                        <a href="#">
+                            <ul class="newitem-box">
+                                <li class="pc_item_name">
+                                    <p>[대용량] 시드물 프리미엄 불소엠치약 120g</p>
+                                </li>
+                                <li class="pc_price_box flex">
+                                    <p class="sale">3,040원</p>
+                                    <p class="ori"></p>
+                                </li>
+                            </ul>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="new_thumb">
+                            <img src="image/newitem_07.png" alt="울트라 페이셜 판테놀 시카 베리어 크림 77ml">
+                        </a>
+                        <a href="#">
+                            <ul class="newitem-box">
+                                <li class="pc_item_name">
+                                    <p>울트라 페이셜 판테놀 시카 베리어 크림 77ml</p>
+                                </li>
+                                <li class="pc_price_box flex">
+                                    <p class="sale">9,900원</p>
+                                    <p class="ori">21,000원</p>
+                                </li>
+                            </ul>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="new_thumb">
+                            <img src="image/newitem_08.png" alt="스킨소스 스테이블 비타민C 20 앰플 12ml">
+                        </a>
+                        <a href="#">
+                            <ul class="newitem-box">
+                                <li class="pc_item_name">
+                                    <p>스킨소스 스테이블 비타민C 20 앰플 12ml</p>
+                                </li>
+                                <li class="pc_price_box flex">
+                                    <p class="sale">19,800원</p>
+                                    <p class="ori">29,800원</p>
+                                </li>
+                            </ul>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 베스트 아이템 -->
+    <section class="pc_bestitem mt-[100px]">
+        <div class="pc_bestitem_wrap con mx-auto">
+            <h1>베스트 아이템</h1>
+            <div class="pc_bestitem_slides mx-auto">
+                <div class="swiper swiper-container con">
+                    <ul class="swiper-wrapper flex pc_bestitem_list">
+                        <li class="swiper-slide swiper-slide-1">
+                            <a href="#" class="best_thumb">
+                                <img src="image/bestitem_01.png" alt="마다가스카르 리얼 수분크림 80g">
+                        </a>
+                            <a href="#">
+                                <ul class="bestitem-box">
+                                    <li class="pc_item_name">
+                                        <p>마다가스카르 리얼 수분크림 80g</p>
+                                    </li>
+                                    <li class="pc_price_box">
+                                        <p class="be-ori">23,800원</p>     
+                                    </li>
+                                </ul>
+                            </a>
+                        </li>
+                        <li class="swiper-slide swiper-slide-2">
+                            <a href="#" class="best_thumb">
+                                <img src="image/bestitem_02.png" alt="민중기 EGF 앰플 11ml">
+                        </a>
+                            <a href="#">
+                                <ul class="bestitem-box">
+                                    <li class="pc_item_name">
+                                        <p>민중기 EGF 앰플 11ml</p>
+                                        <p class="name_blank">&nbsp;</p>
+                                    </li>
+                                    <li class="pc_price_box">
+                                        <p class="be-ori">39,800원</p>     
+                                    </li>
+                                </ul>
+                            </a>
+                        </li>
+                        <li class="swiper-slide swiper-slide-3">
+                            <a href="#" class="best_thumb">
+                                <img src="image/bestitem_03.png" alt="스킨소스 D-판테놀 앰플">
+                        </a>
+                            <a href="#">
+                                <ul class="bestitem-box">
+                                    <li class="pc_item_name">
+                                        <p>스킨소스 D-판테놀 앰플 12ml/32ml</p>
+                                    </li>
+                                    <li class="pc_price_box">
+                                        <p class="be-ori">9,800원</p>     
+                                    </li>
+                                </ul>
+                            </a>
+                        </li>
+                        <li class="swiper-slide swiper-slide-4">
+                            <a href="#" class="best_thumb">
+                                <img src="image/bestitem_04.png" alt="13년을 사랑받아온 민중기 무기자차 썬크림 SPF40 PA++">
+                        </a>
+                            <a href="#">
+                                <ul class="bestitem-box">
+                                    <li class="pc_item_name">
+                                        <p>민중기 무기자차 썬크림 SPF40 PA++</p>
+                                    </li>
+                                    <li class="pc_price_box">
+                                        <p class="be-ori">16,400원</p>     
+                                    </li>
+                                </ul>
+                            </a>
+                        </li>
+                        <li class="swiper-slide swiper-slide-5">
+                            <a href="#" class="best_thumb">
+                                <img src="image/bestitem_05.png" alt="닥터트럽 클렌징 밀크 200ml/500ml">
+                        </a>
+                            <a href="#">
+                                <ul class="bestitem-box">
+                                    <li class="pc_item_name">
+                                        <p>닥터트럽 클렌징 밀크 200ml/500ml</p>
+                                    </li>
+                                    <li class="pc_price_box">
+                                        <p class="be-ori">13,600원</p>     
+                                    </li>
+                                </ul>
+                            </a>
+                        </li>
+                        <li class="swiper-slide swiper-slide-6">
+                            <a href="#" class="best_thumb">
+                                <img src="image/bestitem_06.png" alt="레티놀 흔적 리페어 앰플 30ml">
+                        </a>
+                            <a href="#">
+                                <ul class="bestitem-box">
+                                    <li class="pc_item_name">
+                                        <p>레티놀 흔적 리페어 앰플 30ml</p>
+                                        <p class="name_blank">&nbsp;</p>
+                                    </li>
+                                    <li class="pc_price_box">
+                                        <p class="be-ori">21,800원</p>     
+                                    </li>
+                                </ul>
+                            </a>
+                        </li>
+                        <li class="swiper-slide swiper-slide-7">
+                            <a href="#" class="best_thumb">
+                                <img src="image/bestitem_07.png" alt="민중기 보르피린 앰플 30ml">
+                        </a>
+                            <a href="#">
+                                <ul class="bestitem-box">
+                                    <li class="pc_item_name">
+                                        <p>민중기 보르피린 앰플 30ml</p>
+                                        <p class="name_blank">&nbsp;</p>
+                                    </li>
+                                    <li class="pc_price_box">
+                                        <p class="be-ori">55,400원</p>     
+                                    </li>
+                                </ul>
+                            </a>
+                        </li>
+                        <li class="swiper-slide swiper-slide-8">
+                            <a href="#" class="best_thumb">
+                                <img src="image/bestitem_08.png" alt="민중기 피브로블라스트 앰플 30ml">
+                        </a>
+                            <a href="#">
+                                <ul class="bestitem-box">
+                                    <li class="pc_item_name">
+                                        <p>민중기 피브로블라스트 앰플 30ml</p>
+                                    </li>
+                                    <li class="pc_price_box">
+                                        <p class="be-ori">86,800원</p>     
+                                    </li>
+                                </ul>
+                            </a>
+                        </li>
+                        <li class="swiper-slide swiper-slide-9">
+                            <a href="#" class="best_thumb">
+                                <img src="image/bestitem_09.png" alt="민중기 엑소좀 흔적 스킨 부스터 30ml">
+                        </a>
+                            <a href="#">
+                                <ul class="bestitem-box">
+                                    <li class="pc_item_name">
+                                        <p>민중기 엑소좀 흔적 스킨 부스터 30ml</p>
+                                    </li>
+                                    <li class="pc_price_box">
+                                        <p class="be-ori">22,800원</p>     
+                                    </li>
+                                </ul>
+                            </a>
+                        </li>
+                        <li class="swiper-slide swiper-slide-10">
+                            <a href="#" class="best_thumb">
+                                <img src="image/bestitem_10.png" alt="피토 피디알엔 앰플 12ml">
+                        </a>
+                            <a href="#">
+                                <ul class="bestitem-box">
+                                    <li class="pc_item_name">
+                                        <p>피토 피디알엔 앰플 12ml</p>
+                                        <p class="name_blank">&nbsp;</p>
+                                    </li>
+                                    <li class="pc_price_box">
+                                        <p class="be-ori">32,000원</p>     
+                                    </li>
+                                </ul>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="pc-swiper-btn-group h-[30px]">
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 추천 아이템 구역 -->
+    <section class="pc_comitem mt-[100px]">
+        <div class="pc_comitem_wrap con mx-auto">
+            <h1>추천제품</h1>
+            <div class="pc_dailywrap mb-[60px]">
+                <h2>오늘의 시드물 추천</h2>
+                <ul class="dailyitem flex justify-between">
+                    <li>
+                        <a href="#" class="com_thumb">
+                            <img src="image/todayitem_01.png" alt="내 피부에 수분가득앰플">
+                        </a>
+                        <a href="#">
+                            <ul class="comitem-box">
+                                <li>
+                                    <p class="pc_item_name">내 피부에 수분 가득 앰플</p>
+                                    <p class="name_blank">&nbsp;</p>
+                                </li>
+                                <li class="sub-title">
+                                    <p class="ment">피부의 오아시스</p>
+                                    <p class="ment-sub">속당김, 악건성 피부 관리</p>
+                                </li>
+                            </ul>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="com_thumb">
+                            <img src="image/todayitem_02.png" alt="울트라 페이셜 모이스처라이징 로션">
+                        </a>
+                        <a href="#">
+                            <ul class="comitem-box">
+                                <li class="pc_item_name">
+                                    <p>울트라 페이셜 모이스처라이징 로션</p>
+                                </li>
+                                <li class="sub-title">
+                                    <p class="ment">산뜻한 수분 로션</p>
+                                    <p class="ment-sub">속건성, 지성, 민감성 사용 가능</p>
+                                </li>
+                            </ul>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="com_thumb">
+                            <img src="image/todayitem_03.png" alt="민중기 프로폴리스 앰플">
+                        </a>
+                        <a href="#">
+                            <ul class="comitem-box">
+                                <li class="pc_item_name">
+                                    <p>민중기 프로폴리스 앰플</p>
+                                    <p class="name_blank">&nbsp;</p>
+                                </li>
+                                <li class="sub-title">
+                                    <p class="ment">벌이 만든 건강한 에너지</p>
+                                    <p class="ment-sub">민감한 피부를 위한 레시피</p>
+                                </li>
+                            </ul>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="pc_solutionwrap mb-[60px]">
+                <h2>시드물 추천 솔루션</h2>
+                <div class="solitem">
+                    <ul class="flex justify-between scroll_on type_left ">
+                        <li>
+                            <a href="#"><img src="https://ifh.cc/g/xq6vO1.png" alt="주름/탄력 관리 라인"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="https://ifh.cc/g/adPbM9.png" alt="닥터트럽 라인"></a>
+                        </li>
+                    </ul>
+                    <ul class="flex justify-between scroll_on type_right">
+                        <li>
+                            <a href="#"><img src="https://ifh.cc/g/y734B2.png" alt="수분 크림 라인"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="https://ifh.cc/g/FZqFmS.png" alt="미백 관리 라인"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pc_mouthwrap mb-[60px]">
+                <h2>시드물 입소문 제품</h2>
+                <div class="mouthitem">
+                    <ul class="scroll_on type_bottom">
+                        <li>
+                            <div class="mouth_name_tag">
+                                <p>울트라 페이셜 젤 크림</p>
+                            </div>
+                            <div class="mouth_box">
+                                <a href="#" class="com_thumb">
+                                    <img src="image/mouthitem_01.png" alt="울트라 페이셜 젤 크림 80ml">
+                                </a>
+                                <a href="#">
+                                    <ul class="comitem-box">
+                                        <li class="pc_item_name">
+                                            <p>울트라 페이셜 젤 크림 80ml</p>
+                                            <p class="name_blank">&nbsp;</p>
+                                        </li>
+                                        <li class="sub-title">
+                                            <p class="ment">주름 + 탄력 + 다당류 수분 보습!</p>
+                                            <p class="ment-sub">민감성, 수분 부족 지성 피부 추천</p>
+                                        </li>
+                                    </ul>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="mt-[120px]">
+                            <div class="mouth_name_tag">
+                                <p>장벽 관리 & 리얼 보습 관리</p>
+                            </div>
+                            <div class="mouth_box">
+                                <a href="#" class="com_thumb">
+                                    <img src="image/mouthitem_02.png" alt="판테놀 앰플 + 크림">
+                                </a>
+                                <a href="#">
+                                    <ul class="comitem-box">
+                                        <li class="pc_item_name">
+                                            <p>판테놀 앰플 + 크림</p>
+                                            <p class="name_blank">&nbsp;</p>
+                                        </li>
+                                        <li class="sub-title">
+                                            <p class="ment">피부의 오아시스</p>
+                                            <p class="ment-sub">속당김, 악건성 피부 관리</p>
+                                        </li>
+                                    </ul>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="scroll_on type_bottom">
+                        <li class="box">
+                            <div class="mouth_name_tag">
+                                <p>건조 + 푸석 장벽 고민 종결</p>
+                            </div>
+                            <div class="mouth_box">
+                                <a href="#" class="com_thumb">
+                                    <img src="image/mouthitem_03.png" alt="민중기 세리마이드 80000 앰플">
+                                </a>
+                                <a href="#">
+                                    <ul class="comitem-box">
+                                        <li class="pc_item_name">
+                                            <p>민중기 세리마이드 80000 앰플</p>
+                                            <p class="name_blank">&nbsp;</p>
+                                        </li>
+                                        <li class="sub-title">
+                                            <p class="ment">순수 세라마이드 5중 복합체 적용</p>
+                                            <p class="ment-sub">속당김, 푸석함, 광채, 장벽 관리</p>
+                                        </li>
+                                    </ul>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="mt-[120px]">
+                            <div class="mouth_name_tag">
+                                <p>수분이 부족한 지성 & 속건성</p>
+                            </div>
+                            <div class="mouth_box">
+                                <a href="#" class="com_thumb">
+                                    <img src="https://ifh.cc/g/OSpRDg.png" alt="수부지 & 속건성 추천 제품">
+                                </a>
+                                <a href="#">
+                                    <ul class="comitem-box">
+                                        <li class="pc_item_name">
+                                            <p>수부지 & 속건성 추천 제품</p>
+                                            <p class="name_blank">&nbsp;</p>
+                                        </li>
+                                        <li class="sub-title">
+                                            <p class="ment">속부터 당기고 건조함 해결</p>
+                                            <p class="ment-sub">피부 고민 해결</p>
+                                        </li>
+                                    </ul>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pc_deomawrap mb-[60px]">
+                <h2>추천 시드물 더마 제품</h2>
+                <div class="pc_deomaitem_slides mx-auto con px-[15px]">
+                    <div class="swiper swiper-container">
+                        <ul class="swiper-wrapper flex pc_deomaitem_list">
+                            <li class="swiper-slide swiper-slide-1">
+                                <a href="#" class="com_thumb">
+                                    <img src="https://ifh.cc/g/F0OVvK.png" alt="시드물 센텔라 구스팟 크림 30ml">
+                                </a>
+                                <a href="#">
+                                    <ul class="comitem-box">
+                                        <li>
+                                            <p class="pc_item_name">시드물 센텔라 구스팟 크림 30ml</p>
+                                            <p class="sub-title">장벽강화 + 스피디 진정 + 다크스팟</p>
+                                        </li>
+                                        <li class="pc_price_box">
+                                            <p class="sale">16,800원</p>
+                                            <p class="sub-title">지성, 복합성, 문제성 피부 추천</p>
+                                        </li>
+                                    </ul>
+                                </a>
+                            </li>
+                            <li class="swiper-slide swiper-slide-2">
+                                <a href="#" class="com_thumb">
+                                    <img src="https://ifh.cc/g/9fGY4n.png" alt="흉터 케어 겔">
+                                </a>
+                                <a href="#">
+                                    <ul class="comitem-box">
+                                        <li>
+                                            <p class="pc_item_name">흉터 케어 겔</p>
+                                            <p class="sub-title">빠르게 건조되는 GEL 타입</p>
+                                        </li>
+                                        <li class="pc_price_box">
+                                            <p class="sale">26,600원</p>
+                                            <p class="sub-title">오래되거나 새로운 흉터 관리</p>
+                                        </li>
+                                    </ul>
+                                </a>
+                            </li>
+                            <li class="swiper-slide swiper-slide-3">
+                                <a href="#" class="com_thumb">
+                                    <img src="https://ifh.cc/g/0P0l99.png" alt="센텔라에센셜">
+                                </a>
+                                <a href="#">
+                                    <ul class="comitem-box">
+                                        <li>
+                                            <p class="pc_item_name">센텔라에센셜</p>
+                                            <p class="sub-title">센텔라테라피의 놀라운 변화</p>
+                                        </li>
+                                        <li class="pc_price_box">
+                                            <p class="sale">19,800원</p>
+                                            <p class="sub-title">수분 + 진정 + 보호</p>
+                                        </li>
+                                    </ul>
+                                </a>
+                            </li>
+                            <li class="swiper-slide swiper-slide-4">
+                                <a href="#" class="com_thumb">
+                                    <img src="https://ifh.cc/g/HqVxO8.png" alt="민중기 피브로블라스트 앰플">
+                                </a>
+                                <a href="#">
+                                    <ul class="comitem-box">
+                                        <li>
+                                            <p class="pc_item_name">민중기 피브로블라스트 앰플</p>
+                                            <p class="sub-title">바이오 기능성 화장품</p>
+                                        </li>
+                                        <li class="pc_price_box">
+                                            <p class="sale">69,800원</p>
+                                            <p class="sub-title">민감한 붉은 피부, 깊은 주름 피부</p>
+                                        </li>
+                                    </ul>
+                                </a>
+                            </li>
+                            <li class="swiper-slide swiper-slide-5">
+                                <a href="#" class="com_thumb">
+                                    <img src="https://ifh.cc/g/Mf0XY1.png" alt="민중기 EGF 리페어 크림">
+                                </a>
+                                <a href="#">
+                                    <ul class="comitem-box">
+                                        <li>
+                                            <p class="pc_item_name">민중기 EGF 리페어 크림</p>
+                                            <p class="sub-title">EFG 1ppm, 2,500mg 적용</p>
+                                        </li>
+                                        <li class="pc_price_box">
+                                            <p class="sale">31,200원</p>
+                                            <p class="sub-title">장벽 강화, 보습, 영양, 진정 도움</p>
+                                        </li>
+                                    </ul>
+                                </a>
+                            </li>
+                            <li class="swiper-slide swiper-slide-6">
+                                <a href="#" class="com_thumb">
+                                    <img src="https://ifh.cc/g/G6Y94V.png" alt="민중기 EGF 앰플">
+                                </a>
+                                <a href="#">
+                                    <ul class="comitem-box">
+                                        <li>
+                                            <p class="pc_item_name">민중기 EGF 앰플</p>
+                                            <p class="sub-title">EGF 500ppm 20% 적용</p>
+                                        </li>
+                                        <li class="pc_price_box">
+                                            <p class="sale">39,800원</p>
+                                            <p class="sub-title">피부 장벽 강화 + 손상 예방</p>
+                                        </li>
+                                    </ul>
+                                </a>
+                            </li>
+                            <li class="swiper-slide swiper-slide-7">
+                                <a href="#" class="com_thumb">
+                                    <img src="https://ifh.cc/g/ZVK5NK.png" alt="듀얼 EGF 하이드로 겔">
+                                </a>
+                                <a href="#">
+                                    <ul class="comitem-box">
+                                        <li>
+                                            <p class="pc_item_name">듀얼 EGF 하이드로 겔</p>
+                                            <p class="sub-title">신개념 에이징 멀티 케어</p>
+                                        </li>
+                                        <li class="pc_price_box">
+                                            <p class="sale">10,000원</p>
+                                            <p class="sub-title">미백/주름개선 기능성 화장품</p>
+                                        </li>
+                                    </ul>
+                                </a>
+                            </li>
+                            <li class="swiper-slide swiper-slide-8">
+                                <a href="#" class="com_thumb">
+                                    <img src="https://ifh.cc/g/LDpN93.png" alt="닥터트럽 바이오 리페어 선크림">
+                                </a>
+                                <a href="#">
+                                    <ul class="comitem-box">
+                                        <li>
+                                            <p class="pc_item_name">닥터트럽 바이오 리페어 선크림</p>
+                                            <p class="sub-title">바이오 무기자차</p>
+                                        </li>
+                                        <li class="pc_price_box">
+                                            <p class="sale">19,800</p>
+                                            <p class="sub-title">장벽강화 도움, 수분 보습</p>
+                                        </li>
+                                    </ul>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="pc-swiper-btn-group">
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pc_specailwrap">
+                <h2>스폐셜 케어 아이템</h2>
+                <div class="con pc_specialbox p-[20px]">
+                    <div class="buttonbox flex">
+                        <button class="special-btn sp-btn">
+                            <a href="#"><span>관련 상품 보기</span></a>
+                            <span>달팽이</span>
+                        </button>
+                        <button class="special-btn sp-btn">
+                            <a href="#"><span>관련 상품 보기</span></a>
+                            <span>사카로</span>
+                        </button>
+                        <button class="special-btn sp-btn">
+                            <a href="#"><span>관련 상품 보기</span></a>
+                            <span>휴먼올리고리페어</span>
+                        </button>
+                        <button class="special-btn sp-btn">
+                            <a href="#"><span>관련 상품 보기</span></a>
+                            <span>E.G.F</span>
+                        </button>
+                    </div>
+                    <div class="buttonbox flex mt-[32px] ml-[70px]">
+                        <button class="special-btn sp-btn">
+                            <a href="#"><span>관련 상품 보기</span></a>
+                            <span>내추럴 메이크업</span>
+                        </button>
+                        <button class="special-btn sp-btn">
+                            <a href="#"><span>관련 상품 보기</span></a>
+                            <span>녹차</span>
+                        </button>
+                        <button class="special-btn sp-btn">
+                            <a href="#"><span>관련 상품 보기</span></a>
+                            <span>프로폴리스</span>
+                        </button>
+                        <button class="special-btn sp-btn">
+                            <a href="#"><span>관련 상품 보기</span></a>
+                            <span>아크바이</span>
+                        </button>
+                    </div>
+                    <div class="buttonbox flex mt-[32px]">
+                        <button class="special-btn sp-btn">
+                            <a href="#"><span>관련 상품 보기</span></a>
+                            <span>비누</span>
+                        </button>
+                        <button class="special-btn sp-btn">
+                            <a href="#"><span>관련 상품 보기</span></a>
+                            <span>알로에</span>
+                        </button>
+                        <button class="special-btn sp-btn">
+                            <a href="#"><span>관련 상품 보기</span></a>
+                            <span>각질관리</span>
+                        </button>
+                        <button class="special-btn sp-btn">
+                            <a href="#"><span>관련 상품 보기</span></a>
+                            <span>카렌듈라</span>
+                        </button>
+                    </div>
+                    <div class="buttonbox flex mt-[32px] ml-[70px]">
+                        <button class="special-btn sp-btn">
+                            <a href="#"><span>관련 상품 보기</span></a>
+                            <span>콜라겐</span>
+                        </button>
+                        <button class="special-btn sp-btn">
+                            <a href="#"><span>관련 상품 보기</span></a>
+                            <span>티트리</span>
+                        </button>
+                        <button class="special-btn sp-btn">
+                            <a href="#"><span>관련 상품 보기</span></a>
+                            <span>산자나무</span>
+                        </button>
+                        <button class="special-btn sp-btn">
+                            <a href="#"><span>관련 상품 보기</span></a>
+                            <span>아스타잔틴F</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="con mb_specialbox p-[20px]">
+                    <ul class="buttonbox">
+                        <li><button class="special-btn sp-btn">
+                                <a href="#"><span>관련 상품 보기</span></a>
+                                <span>달팽이</span>
+                            </button></li>
+                        <li><button class="special-btn sp-btn">
+                                <a href="#"><span>관련 상품 보기</span></a>
+                                <span>E.G.F</span>
+                            </button></li>
+                        <li><button class="special-btn sp-btn">
+                                <a href="#"><span>관련 상품 보기</span></a>
+                                <span>프로폴리스</span>
+                            </button></li>
+                        <li><button class="special-btn sp-btn">
+                                <a href="#"><span>관련 상품 보기</span></a>
+                                <span>알로에</span>
+                            </button></li>
+                        <li><button class="special-btn sp-btn">
+                                <a href="#"><span>관련 상품 보기</span></a>
+                                <span>콜라겐</span>
+                            </button></li>
+                        <li><button class="special-btn sp-btn">
+                                <a href="#"><span>관련 상품 보기</span></a>
+                                <span>아스타잔틴F</span>
+                            </button></li>
+                    </ul>
+                    <ul class="buttonbox">
+                        <li><button class="special-btn sp-btn">
+                                <a href="#"><span>관련 상품 보기</span></a>
+                                <span>사카로</span>
+                            </button></li>
+                        <li><button class="special-btn sp-btn">
+                                <a href="#"><span>관련 상품 보기</span></a>
+                                <span>내추럴 메이크업</span>
+                            </button></li>
+                        <li><button class="special-btn sp-btn">
+                                <a href="#"><span>관련 상품 보기</span></a>
+                                <span>아크바이</span>
+                            </button></li>
+                        <li><button class="special-btn sp-btn">
+                                <a href="#"><span>관련 상품 보기</span></a>
+                                <span>각질관리</span>
+                            </button></li>
+                        <li><button class="special-btn sp-btn">
+                                <a href="#"><span>관련 상품 보기</span></a>
+                                <span>티트리</span>
+                            </button></li>
+                    </ul>
+                    <ul class="buttonbox">
+                        <li><button class="special-btn sp-btn">
+                                <a href="#"><span>관련 상품 보기</span></a>
+                                <span>휴먼올리고리페어</span>
+                            </button></li>
+                        <li><button class="special-btn sp-btn">
+                                <a href="#"><span>관련 상품 보기</span></a>
+                                <span>녹차</span>
+                            </button></li>
+                        <li><button class="special-btn sp-btn">
+                                <a href="#"><span>관련 상품 보기</span></a>
+                                <span>비누</span>
+                            </button></li>
+                        <li><button class="special-btn sp-btn">
+                                <a href="#"><span>관련 상품 보기</span></a>
+                                <span>카렌듈라</span>
+                            </button></li>
+                        <li><button class="special-btn sp-btn">
+                                <a href="#"><span>관련 상품 보기</span></a>
+                                <span>산자나무</span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PC 푸터 -->
+    <footer class="pc-footer mt-[120px]">
+        <div class="mx-auto w-full">
+            <div class="pc_footer">
+                <div class="pc_info">
+                    <div class="con mx-auto">
+                        <ul class="infoitem_wrap flex justify-between">
+                            <li><a href="#">회사소개</a></li>
+                            <li class="font-bold"><a href="#">개인정보처리방침</a></li>
+                            <li><a href="#">영상정보처리기기 운영/관리 방침</a></li>
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">이용안내</a></li>
+                            <li><a href="#">고객센터</a></li>
+                            <li><a href="#">회원가입</a></li>
+                            <li><a href="#">사업자정보확인</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pc_footerinfo py-[32px] footer-bg">
+                    <div class="con mx-auto flex justify-between">
+                        <div class="footerlogo">
+                            <a href="#">
+                                <img src="https://ifh.cc/g/vAT9XH.png" alt="시드물 로고">
+                            </a>
+                        </div>
+                        <div class="footerinfo">
+                            <h5>주식회사 시드물</h5>
+                            <ul class="infotext">
+                                <li>대표: 민병권 　사업자등록번호: 305-81-94469</li>
+                                <li>건강기능식품판매업:대전 중구 제503</li>
+                                <li>통신판매업신고번호: 제2008-대전중구-0247호</li>
+                                <li>주소: 우) 35083　대전광역시 중구 안영로 42(안영동)</li>
+                                <li>전화: 1577-9638　해외: +82-42-716-0227</li>
+                                <li>FAX: 042-367-7989</li>
+                                <li>서비스개선: help@sidmool.com</li>
+                                <li>개인정보책임자 박소진</li>
+                                <li class="font-bold">COPYRIGHT (C) 2008 SIDMOOL ALL RIGHTS RESERVED</li>
+                            </ul>
+                        </div>
+                        <div class="footercs">
+                            <h5>고객만족 상담실</h5>
+                            <p class="font-bold text-lg">1577-9638</p>
+                            <p class="text-xs">대표 번호가 통화 중인 경우, 아래 번호로 연락 부탁드립니다.</p>
+                            <div class="callbox text-sm mt-[10px]">
+                                <p>전화주문 전용 연락처:　042-716-0228</p>
+                                <p>해외 고객만족 상담실:　+82-42-716-0227</p>
+                            </div>
+                            <div class="timebox text-sm mt-[10px]">
+                                <div class="flex">
+                                    <p>전화상담 업무시간</p>
+                                    <p class="text-xs mt-[3px] ml-[10px]">공휴일/토요일 휴무</p>
+                                </div>
+                                <div class="flex">
+                                    <p class="mr-[10px]">평일</p>
+                                    <p>AM 09:00 ~ PM 17:00</p>
+                                </div>
+                                <div class="flex">
+                                    <p class="mr-[10px]">점심시간</p>
+                                    <p>PM 12:00 ~PM 13:30</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="h-[80px] footer-bg mb-blank"></div>
+        </div>
+    </footer>
+
+    <!-- mobile 푸터 -->
+    <footer class="mb-footer mt-[120px]">
+        <div class="mx-auto w-full">
+            <div class="mb_footerwrap footer-bg flex">
+                <div class="mb_footerinfo">
+                    <div class="con mx-auto p-[15px]">
+                        <div class="footerlogo">
+                            <a href="#">
+                                <img src="https://ifh.cc/g/vAT9XH.png" alt="시드물 로고">
+                            </a>
+                        </div>
+                        <div class="footerinfo mt-[15px]">
+                            <h5>주식회사 시드물</h5>
+                            <ul class="infotext">
+                                <li>대표: 민병권 　사업자등록번호: 305-81-94469</li>
+                                <li>건강기능식품판매업:대전 중구 제503</li>
+                                <li>통신판매업신고번호: 제2008-대전중구-0247호</li>
+                                <li>주소: 우) 35083　대전광역시 중구 안영로 42(안영동)</li>
+                                <li>전화: 1577-9638　해외: +82-42-716-0227</li>
+                                <li>FAX: 042-367-7989</li>
+                                <li>서비스개선: help@sidmool.com</li>
+                                <li>개인정보책임자 박소진</li>
+                                <li class="font-bold">COPYRIGHT (C) 2008 SIDMOOL ALL RIGHTS RESERVED</li>
+                            </ul>
+                        </div>
+                        <div class="footercs mt-[15px]">
+                            <h5>고객만족 상담실</h5>
+                            <p class="font-bold text-lg">1577-9638</p>
+                            <p class="text-xs">대표 번호가 통화 중인 경우, 아래 번호로 연락 부탁드립니다.</p>
+                            <div class="callbox text-sm mt-[10px]">
+                                <p>전화주문 전용 연락처:　042-716-0228</p>
+                                <p>해외 고객만족 상담실:　+82-42-716-0227</p>
+                            </div>
+                            <div class="timebox text-sm mt-[10px]">
+                                <div class="flex">
+                                    <p>전화상담 업무시간</p>
+                                    <p class="text-xs mt-[3px] ml-[10px]">공휴일/토요일 휴무</p>
+                                </div>
+                                <div class="flex">
+                                    <p class="mr-[10px]">평일</p>
+                                    <p>AM 09:00 ~ PM 17:00</p>
+                                </div>
+                                <div class="flex">
+                                    <p class="mr-[10px]">점심시간</p>
+                                    <p>PM 12:00 ~PM 13:30</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb_info">
+                    <ul class="infoitem_wrap mt-[85px]">
+                            <li><a href="#">회사소개</a></li>
+                            <li class="font-bold"><a href="#">개인정보처리방침</a></li>
+                            <li><a href="#">영상정보처리기기 운영/관리 방침</a></li>
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">이용안내</a></li>
+                            <li><a href="#">고객센터</a></li>
+                            <li><a href="#">회원가입</a></li>
+                            <li><a href="#">사업자정보확인</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="h-[80px] footer-bg"></div>
+        </div>
+    </footer>
+
+    <!-- mobile 하단 메뉴 -->
+    <footer class="mb_bottom_menu">
+        <div class="mb_bottom_menu_wrap mx-auto">
+            <ul class="flex items-center justify-center justify-between gap-x-[50px]">
+                <li><a href="#">
+                        <img src="https://ifh.cc/g/V233Am.png" alt="모바일 메뉴 아이콘"></a>
+                </li>
+                <li><a href="#">
+                        <img src="https://ifh.cc/g/zK6vf2.png" alt="모바일 검색 아이콘"></a>
+                </li>
+                <li class="mb_home"><a href="#">
+                        <img src="https://ifh.cc/g/35v4Rh.png" alt="모바일 홈 아이콘"></a>
+                </l>
+                <li><a href="#">
+                        <img src="https://ifh.cc/g/wBfWxS.png" alt="모바일 장바구니 아이콘"></a>
+                </li>
+                <li><a href="#">
+                        <img src="https://ifh.cc/g/Zw0408.png" alt="모바일 마이 페이지 아이콘"></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
