@@ -452,20 +452,88 @@ html > body {
 .pc_banner_contents {
 	height: 400px;
 	position: relative;
+	width: 100%;
 }
 
 .pc_banner_wrap {
-	height: 100%;	
+	height: 100%;
+	width: 100%;
 }
 
 .pc_banner_slides {
 	position: relative;
 	height: 100%;	
+	width: 100%;
+}
+
+.pc_banner_slides .swiper-container {
+	width: 100%;
 }
 
 .pc_banner_slides .swiper-container .swiper-wrapper {	
 	height: 100%;
 }
+
+/* 스와이퍼 배경 그라데이션 */
+
+.pc_banner_slides .swiper-slide img {
+	margin: 0 auto;
+}
+
+.pc_banner_slides .swiper-slide-1 {
+	width: 100%;
+	background-image: linear-gradient(to right, #CDEBB7, #EEFCDB);
+}
+
+.pc_banner_slides .swiper-slide-2 {
+	width: 100%;
+}
+
+.pc_banner_slides .swiper-slide-3 {
+	width: 100%;
+	background-image: linear-gradient(to right, #B5CFB2, #D3E4CA);
+}
+
+.pc_banner_slides .swiper-slide-4 {
+	width: 100%;
+	background-image: linear-gradient(to right, #BA8ECD, #D8C1DD);
+}
+
+.pc_banner_slides .swiper-slide-5 {
+	width: 100%;
+	background-image: linear-gradient(to right, #F7D93A, #FBEA8D);
+}
+
+.pc_banner_slides .swiper-slide-6 {
+	width: 100%;
+	background-image: linear-gradient(to right, #E6AE9D, #F6EDDA);
+}
+
+.pc_banner_slides .swiper-slide-7 {
+	width: 100%;
+	background-image: linear-gradient(to right, #F99423, #FFEAC4);
+}
+
+.pc_banner_slides .swiper-slide-8 {
+	width: 100%;
+	background-image: linear-gradient(to right, #FFA4AF, #FFEADE);
+}
+
+.pc_banner_slides .swiper-slide-9 {
+	width: 100%;
+	background-image: linear-gradient(to right, #FFEADD, #FCF9E9);
+}
+
+.pc_banner_slides .swiper-slide-10 {
+	width: 100%;
+	background-image: linear-gradient(to right, #A6DDF2, #EFFAFD);
+}
+
+.pc_banner_slides .swiper-slide-11 {
+	width: 100%;
+	background-image: linear-gradient(to right, #D8C160, #000000);
+}
+
 
 /* 스와이퍼 버튼 */
 .pc_banner_slides .swiper-button-prev::after, .pc_banner_slides .swiper-button-next::after {
@@ -486,6 +554,7 @@ html > body {
 
 .pc_banner_slides .swiper-button-next {
 	top: 96%;
+	left: 92.5%;
 }
 
 /* 스와이퍼 페이지 네이션 */
@@ -538,8 +607,8 @@ html > body {
 /* 신상품 구현 시작 */
 
 .pc_newitem_wrap {
-	border: 2px solid var(--site-color);
-	border-width: 2px 0 0 0;
+	border: 1px solid var(--site-color);
+	border-width: 1px 0 0 0;
 	padding: 60px;
 }
 
@@ -575,11 +644,14 @@ html > body {
 /* 신상품 구현 끝 */
 
 /* 베스트 아이템 구현 시작 */
+.pc_bestitem {
+	background-color: #FAFFF3;
+}
 
 .pc_bestitem_wrap {
 	position: relative;
-	border: 2px solid var(--site-color);
-	border-width: 2px 0 0 0;
+	border: 1px solid var(--site-color);
+	border-width: 1px 0 0 0;
 	height: 550px;
 	padding: 60px;
 }
@@ -664,8 +736,8 @@ html > body {
 /* 추천 상품 시작 */
 /* 공통 */
 .pc_comitem_wrap {
-	border: 2px solid var(--site-color);
-	border-width: 2px 0 0 0;
+	border: 1px solid var(--site-color);
+	border-width: 1px 0 0 0;
 	padding: 60px;
 }
 
@@ -807,6 +879,10 @@ html > body {
 }
 
 /* 스폐셜 케어 아이템 */
+.pc_specailwrap {
+	background-color: #F5FFF1;
+}
+
 .pc_specailwrap .buttonbox {
 	width: 90%;
 	justify-content: space-between;
